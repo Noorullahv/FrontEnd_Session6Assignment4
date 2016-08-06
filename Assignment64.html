@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 6.4</title>
+
+	<script type="text/javascript">
+		
+		//var checkBrackets = "( ( a + b ) / 5 abd )";
+		var checkBrackets = ") ( a + b ) (";
+		//var checkBrackets = "( b * ( c + d *2 / ( 2 + ( 12 abc / ( a + 3 ) ) ) )";
+		var len = checkBrackets.length;
+
+		var slno = 0;
+
+		var nOpenBracketCount = 0;
+		var nClosBracketCount = 0;
+
+		var res;																										
+
+		
+		//alert("Length of the String :- " + len)
+
+		for(slno; slno<=len;slno++){
+			res = checkBrackets.substring(slno,slno-1);
+
+			if (res == "("){
+				nOpenBracketCount = nOpenBracketCount+1
+			}
+
+			if (res == ")"){
+				nClosBracketCount = nClosBracketCount+1
+			}
+			
+			//alert(slno + "Word is " + res);
+			
+			
+		}
+
+
+		if(nOpenBracketCount == nClosBracketCount)	{
+			alert("Correct");
+		}
+		else{
+			alert("Incorrect")
+		}
+			//alert(nOpenBracketCount);
+			//alert(nClosBracketCount);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
